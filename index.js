@@ -64,3 +64,11 @@ function newCard() {
   cards.push(card);
   renderGame();
 }
+
+let hands = ['rock', 'paper', 'scissor'];
+
+function newHands() {
+  let randomHand = Math.floor(Math.random() * 3);
+  return hands[randomHand];
+}
+console.log(newHands());
