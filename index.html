@@ -7,15 +7,24 @@
     <title>Kat New</title>
   </head>
   <body>
-    <h1>BlackJack Game</h1>
-    <h2 id="message-el">Want to play a game?</h2>
-    <h2 id="cards-el">Cards</h2>
-    <h2 id="sum-el">Sum</h2>
-    <button onclick="startGame()">Start Game</button>
-    <br />
-    <br />
-    <button onclick="newCard()">New Card</button>
-    <p id="player-el"></p>
+    <button class="btn-login">Login</button>
+    <div class="overlay">
+      <div class="loginform">
+        <span>&times;</span>
+        <form action="">
+          <div>
+            <label for="">UserName</label>
+            <input type="text"/>
+          </div>
+          <div>
+            <label for="">Password</label>
+            <input type="pasword"/>
+          </div>
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+  
     <script src="index.js"></script>
   </body>
 </html>
