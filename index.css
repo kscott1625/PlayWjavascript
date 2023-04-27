@@ -1,55 +1,72 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    box-sizing: border-box;
 }
 
-.btn-login{
-    padding:10px 15px;
-    cursor: pointer;
-
+body{
+    background: rgb(184, 184, 210);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-.overlay{
-    width: 100%;
-    top: 0%;
+.modal_wrapper{
     position: fixed;
-    height: 100vh;
-    background: khaki;
-    z-index: -1;
-    opacity: 0;
-    transform:1s ;
-}
-.loginform{
-    width: 350px;
-    padding: 20px;
-    background-color: blue;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%)
-}
-
-.loginform input{
+    left:0;
+    top:0;
+    background: rgb(190, 156, 156);
+    height: 100%;
     width: 100%;
-    height:35px;
-    margin-bottom: 15px;
-}
-.loginform button{
-    background-color: black;
-    color: aliceblue;
-    padding: 10px
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
 }
 
-.loginform span{
-    position: absolute;
-    right: 0px;
-    width: 30px;
-    height: 30px;
+.container{
+    background: antiquewhite;
+    width:560px;
+    max-width:90%;
+    padding: 20px;
+    border-radius: 4px;
+    position: relative;
+    transform: translateY(-100%);
+    transition: all .3s ease-in-out;
+}
+
+.btn-login {
+    background:  #6B46C1;
+    padding: 10px 40px;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 18px;
     cursor: pointer;
-    line-height: 30px;
-    background-color: aquamarine;
-    text-align: center;
-    top: 0px
 }
-
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.container button.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container button.close:hover {
+    color: #6B46C1;
+}
+.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal_wrapper.active .container{
+    transform: translateY(0px);
+}
